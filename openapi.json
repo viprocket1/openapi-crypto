@@ -1,0 +1,43 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Ethereum Wallet API",
+      "version": "1.0.0",
+      "description": "An API to create a new Ethereum wallet."
+    },
+    "servers": [
+      {
+        "url": "https://massiveironcladsysadmin.joshvaarkman.repl.co"
+      }
+    ],
+    "paths": {
+      "/wallet": {
+        "post": {
+          "summary": "Create a new Ethereum wallet",
+          "responses": {
+            "200": {
+              "description": "Wallet created successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "publicKey": {
+                        "type": "string",
+                        "description": "The public key of the new wallet"
+                      },
+                      "address": {
+                        "type": "string",
+                        "description": "The address of the new wallet"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
